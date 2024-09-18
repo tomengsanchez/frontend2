@@ -1,5 +1,5 @@
 'use client'
-import pjson from '../../../package.json'
+// import pjson from '../../../package.json'
 import { useState } from 'react'
 import {
   Dialog,
