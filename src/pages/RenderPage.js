@@ -2,7 +2,7 @@ import DashboardHome from "./Modules/Dashboard/DashboardHome";
 import MasterlistHome from "./Modules/Masterlist/MasterListHome";
 import ReportsHome from "./Modules/Reports/ReportsHome";
 import RequestHome from "./Modules/Request/RequestHome";
-import SettingsHome from "./Modules/SettingsHome";
+import SettingsHome from "./Modules/Settings/SettingsHome";
 
 export default function RenderPage(props){
 
