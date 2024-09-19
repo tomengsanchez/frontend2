@@ -1,6 +1,6 @@
 'use client'
 // import pjson from '../../../package.json'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const user = {
@@ -9,11 +9,19 @@ const user = {
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
+
+const queryParameters = new URLSearchParams(window.location.search)
+  const currentPage = queryParameters.get("current")
+  // const name = queryParameters.get("name")
+
+
+console.log(currentPage);
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Dashboard', href: '/', current: currentPage ?false:true  },
+  { name: 'Request', href: '/request?current=request', current: currentPage === 'request'?true:false  },
+  // { name: 'Team', href: '#', current: false },
+  { name: 'Masterlist', href: '/masterlist?current=masterlist', current: currentPage === 'masterlist'?true:false },
+  // { name: 'Calendar', href: '#', current: false },
   { name: 'Reports', href: '#', current: false },
 ]
 const userNavigation = [
@@ -22,12 +30,14 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 
+console.log(navigation)
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function HeaderAuth() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
 
   return (
     <div>
