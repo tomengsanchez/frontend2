@@ -22,7 +22,8 @@ const navigation = [
   // { name: 'Team', href: '#', current: false },
   { name: 'Masterlist', href: '/?current=masterlist', current: currentPage === 'masterlist'?true:false },
   // { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Reports', href: '/?current=reports', current: currentPage === 'settings'?true:false },
+  { name: 'Settings', href: '/?current=settings', current: currentPage === 'settings'?true:false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
