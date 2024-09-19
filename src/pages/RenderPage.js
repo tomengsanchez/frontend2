@@ -4,7 +4,7 @@ import RequestHome from "./Modules/Request/RequestHome";
 
 export default function RenderPage(props){
 
-    console.log(props);
+    // console.log(props);
     if(props.renderPage === 'masterlist')
         return <MasterlistHome></MasterlistHome>
     else if(props.renderPage === 'request')
