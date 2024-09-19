@@ -15,12 +15,12 @@ const queryParameters = new URLSearchParams(window.location.search)
   // const name = queryParameters.get("name")
 
 
-console.log(currentPage);
+// console.log(currentPage);s
 const navigation = [
   { name: 'Dashboard', href: '/', current: currentPage ?false:true  },
-  { name: 'Request', href: '/request?current=request', current: currentPage === 'request'?true:false  },
+  { name: 'Request', href: '/?current=request', current: currentPage === 'request'?true:false  },
   // { name: 'Team', href: '#', current: false },
-  { name: 'Masterlist', href: '/masterlist?current=masterlist', current: currentPage === 'masterlist'?true:false },
+  { name: 'Masterlist', href: '/?current=masterlist', current: currentPage === 'masterlist'?true:false },
   // { name: 'Calendar', href: '#', current: false },
   { name: 'Reports', href: '#', current: false },
 ]
@@ -30,7 +30,7 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 
-console.log(navigation)
+// console.log(navigation)
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
